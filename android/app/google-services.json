@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "870417991246",
+    "project_id": "eshop-ce154",
+    "storage_bucket": "eshop-ce154.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870417991246:android:10588215df205b4492651f",
+        "android_client_info": {
+          "package_name": "com.wrteam.eshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870417991246-67985h0dsh87u7lbbluf68mstte0p4s5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1bAsOprI4iaKU_v54NnVdeWA87KeqY8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870417991246-67985h0dsh87u7lbbluf68mstte0p4s5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
