@@ -14,6 +14,43 @@
       },
       "oauth_client": [
         {
+          "client_id": "870417991246-fa46jeqvs73m9qvlh89k1qoupbtg6mvg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wrteam.eshop",
+            "certificate_hash": "e6788079a336324fe0b7a53c893ea5544888fe7d"
+          }
+        },
+        {
+          "client_id": "870417991246-67985h0dsh87u7lbbluf68mstte0p4s5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1bAsOprI4iaKU_v54NnVdeWA87KeqY8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870417991246-67985h0dsh87u7lbbluf68mstte0p4s5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870417991246:android:67681b7db3f8d49d92651f",
+        "android_client_info": {
+          "package_name": "lhp.world"
+        }
+      },
+      "oauth_client": [
+        {
           "client_id": "870417991246-67985h0dsh87u7lbbluf68mstte0p4s5.apps.googleusercontent.com",
           "client_type": 3
         }

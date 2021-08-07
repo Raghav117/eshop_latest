@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:eshop/Helper/String.dart';
 import 'package:eshop/SendOtp.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -153,14 +154,15 @@ class _LoginPageState extends State<Login> with TickerProviderStateMixin {
   }
 
   Future<void> getLoginUser() async {
-    var data = {MOBILE: mobile, PASSWORD: password};
-
+    String token = await FirebaseMessaging.instance.getToken();
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" +
+        token.toString());
+// Fireba
+    var data = {MOBILE: mobile, PASSWORD: password,"fcm_id":token.toString()};
     Response response =
         await post(getUserLoginApi, body: data, headers: headers)
             .timeout(Duration(seconds: timeOut));
     var getdata = json.decode(response.body);
-    
-
 
     bool error = getdata["error"];
     String msg = getdata["message"];
@@ -196,11 +198,10 @@ class _LoginPageState extends State<Login> with TickerProviderStateMixin {
     return Expanded(
       flex: 4,
       child: Center(
-        child:  Image.asset(
+          child: Image.asset(
         'assets/images/sliderph.png',
         scale: 5,
-      )
-      ),
+      )),
     );
   }
 

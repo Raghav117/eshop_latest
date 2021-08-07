@@ -1977,6 +1977,7 @@ class StateCart extends State<Cart> with TickerProviderStateMixin {
                                                           alignment:
                                                               WrapAlignment
                                                                   .spaceEvenly,
+                                                          spacing: 10,
                                                           children:
                                                               discount.map((e) {
                                                             int index = discount
@@ -2011,7 +2012,8 @@ class StateCart extends State<Cart> with TickerProviderStateMixin {
                                                                             (100 -
                                                                                 int.parse(e["offerdiscount"]));
                                                                   });
-                                                                } else {
+                                                                } else if (select ==
+                                                                    -1) {
                                                                   select =
                                                                       index;
                                                                   dis = e["id"]
@@ -2020,6 +2022,16 @@ class StateCart extends State<Cart> with TickerProviderStateMixin {
                                                                       () {
                                                                     totalPrice = totalPrice -
                                                                         totalPrice *
+                                                                            int.parse(e["offerdiscount"]) /
+                                                                            100;
+                                                                  });
+                                                                } else {
+                                                                  select =
+                                                                      index;
+                                                                  checkoutState(
+                                                                      () {
+                                                                    totalPrice = oriPrice -
+                                                                        oriPrice *
                                                                             int.parse(e["offerdiscount"]) /
                                                                             100;
                                                                   });
@@ -2516,6 +2528,8 @@ class StateCart extends State<Cart> with TickerProviderStateMixin {
       //   payVia = "Paytm";
       // else if (payMethod == "Wallet") payVia = "Wallet";
       try {
+        print(totalPrice.toString() +
+            "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         var parameter = {
           USER_ID: CUR_USERID,
           MOBILE: mob,

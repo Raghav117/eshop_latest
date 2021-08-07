@@ -1,4 +1,4 @@
-package com.wrteam.eshop;
+package lhp.world;
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity;

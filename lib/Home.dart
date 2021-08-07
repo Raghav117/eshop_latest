@@ -1012,8 +1012,8 @@ class StateHomePage extends State<HomePage> with TickerProviderStateMixin {
       // color: Colors.greenAccent,
       child: GridView.count(
         crossAxisCount: 4,
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
+        crossAxisSpacing: 5,
+        mainAxisSpacing: 5,
         scrollDirection: Axis.vertical,
         // shrinkWrap: true,
         physics: AlwaysScrollableScrollPhysics(),
@@ -1056,37 +1056,37 @@ class StateHomePage extends State<HomePage> with TickerProviderStateMixin {
                   Center(
                     child: Padding(
                       padding: const EdgeInsetsDirectional.only(bottom: 5.0),
-                      child: new ClipRRect(
-                        borderRadius: BorderRadius.circular(25.0),
-                        child: new FadeInImage(
-                          fadeInDuration: Duration(milliseconds: 150),
-                          image: NetworkImage(
-                            catList[index].image,
-                          ),
-                          height: 50.0,
-                          width: 50.0,
-                          fit: BoxFit.cover,
-                          imageErrorBuilder: (context, error, stackTrace) =>
-                              erroWidget(50),
-
-                          //  errorWidget: (context, url, e) => placeHolder(50),
-                          placeholder: placeHolder(50),
+                      child: new FadeInImage(
+                        fadeInDuration: Duration(milliseconds: 150),
+                        image: NetworkImage(
+                          catList[index].image,
                         ),
+                        height: 60.0,
+                        width: 60.0,
+
+                        fit: BoxFit.contain,
+                        imageErrorBuilder: (context, error, stackTrace) =>
+                            erroWidget(50),
+
+                        //  errorWidget: (context, url, e) => placeHolder(50),
+                        placeholder: placeHolder(50),
                       ),
                     ),
                   ),
                   Spacer(),
                   Container(
-                    child: Text(
-                      catList[index].name,
-                      style: Theme.of(context).textTheme.caption.copyWith(
-                          color: colors.fontColor,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 10),
-                      overflow: TextOverflow.ellipsis,
-                      textAlign: TextAlign.center,
+                    child: FittedBox(
+                      child: Text(
+                        catList[index].name,
+                        style: Theme.of(context).textTheme.caption.copyWith(
+                            color: colors.fontColor,
+                            // fontWeight: FontWeight.w600,
+                            fontSize: 15),
+                        // overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
+                      ),
                     ),
-                    width: 50,
+                    // width: 50,
                   ),
                   Spacer(),
                 ],
